@@ -4,199 +4,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FathimaRiswanaA</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathima Riswana A</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-     <!-- Navbar Section -->
-    <nav id="navbar" class="flex s-around bg-color">
-        <div class="left-nav">
-            <h2 class="t-white">Fathima</h2>
+<body class="bg-dark text-white">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Fathima</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-uppercase">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="container py-5 text-center text-md-start">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h6>Hello, I'm</h6>
+      <h1 class="display-5 fw-bold">Fathima Riswana A</h1>
+      <h4 class="mb-4">Python Full Stack Developer</h4>
+      <a href="{% static 'pdf/Fathima_Riswana_A_Resume (1).pdf' %}" class="btn btn-outline-light me-2" target="_blank">Resume</a>
+      <a href="#contact" class="btn btn-light">Let's Talk</a>
+    </div>
+    <div class="col-md-6 text-center mt-4 mt-md-0">
+      <img src="{% static 'images/me.png' %}" alt="Profile" class="img-fluid rounded-circle" style="max-width: 280px;">
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container py-5">
+  <h2 class="text-center mb-4">About Me</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'images/dog.png' %}" alt="About" class="img-fluid rounded" style="max-width: 70%;">
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <h3 class="fw-bold">Fathima Riswana A</h3>
+      <p>Hello! I am a passionate Python full-stack developer with a keen interest in building efficient web applications. I enjoy solving real-world problems and continuously improving my skills through new technologies and collaborative projects.</p>
+      <a href="{% static 'pdf/Fathima_Riswana_A_Resume (1).pdf' %}" download class="btn btn-outline-light">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+  <h2 class="text-center mb-4">Skills</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="mb-3"><label>Python</label><div class="progress"><div class="progress-bar bg-info" style="width: 90%">90%</div></div></div>
+      <div class="mb-3"><label>Django</label><div class="progress"><div class="progress-bar bg-success" style="width: 90%">90%</div></div></div>
+      <div class="mb-3"><label>HTML</label><div class="progress"><div class="progress-bar bg-danger" style="width: 90%">90%</div></div></div>
+      <div class="mb-3"><label>CSS</label><div class="progress"><div class="progress-bar bg-warning" style="width: 90%">90%</div></div></div>
+      <div class="mb-3"><label>React JS</label><div class="progress"><div class="progress-bar bg-primary" style="width: 80%">80%</div></div></div>
+      <div class="mb-3"><label>Figma</label><div class="progress"><div class="progress-bar bg-secondary" style="width: 70%">70%</div></div></div>
+      <div class="mb-3"><label>WordPress</label><div class="progress"><div class="progress-bar bg-dark" style="width: 60%">60%</div></div></div>
+      <div class="mb-3"><label>JavaScript</label><div class="progress"><div class="progress-bar bg-info" style="width: 65%">65%</div></div></div>
+      <div class="mb-3"><label>MongoDB</label><div class="progress"><div class="progress-bar bg-success" style="width: 50%">50%</div></div></div>
+      <div class="mb-3"><label>MySQL</label><div class="progress"><div class="progress-bar bg-danger" style="width: 50%">50%</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container py-5">
+  <h2 class="text-center mb-4">Projects</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="bg-secondary text-white p-4 rounded h-100">
+        <h5>Time Tab</h5>
+        <p>Timetable generator for managing schedules in educational settings. Built with Django.</p>
+        <a href="https://github.com/fathimaris/Timetable_Generator" target="_blank" class="btn btn-outline-light">GitHub</a>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="bg-secondary text-white p-4 rounded h-100">
+        <h5>Resume Extractor</h5>
+        <p>Extracts resume data (email, phone, skills) using regex and provides an HR dashboard.</p>
+        <a href="https://github.com/fathimaris/Resume-Details-Extraction-System" target="_blank" class="btn btn-outline-light">GitHub</a>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="bg-secondary text-white p-4 rounded h-100">
+        <h5>Milina Events</h5>
+        <p>Event management app with creation, listing, and auto-deletion features. Built in Django.</p>
+        <a href="https://github.com/fathimaris/Event_Management" target="_blank" class="btn btn-outline-light">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5">
+  <h2 class="text-center mb-4">Contact Me</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
         </div>
-        <div class="right-nav">
-            <ul class="flex">
-                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
-                <li><a href="#Projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
-                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
-            </ul>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
         </div>
-    </nav>
-
-        <!-- Home Section -->
-    <section id="home" class="flex s-around sw-80 m-auto">
-        <div class="home-left flex items-center">
-            <div class="home-content">
-                <h6 class="poppinss">Hi, I'm</h6>
-                <h1 class="t-white">FATHIMA RISWANA A</h1>
-                <h4 class="poppinss">Python Full Stack Developer</h4>
-                <a href="{% static 'pdf/Fathima_Riswana_A_Resume (1).pdf' %}"  target="_blank">
-                    <button class="btn poppins">Resume</button></a>
-
-                <a class="btn live poppins" id="hireme" href="#Contact"
-                    target="_blank">Let's Talk</a>
-            </div>
+        <div class="mb-3">
+          <input type="text" name="number" class="form-control" placeholder="Your Phone" required>
         </div>
-        <div class="home-right flex s-center items-center">
-            <div class="circle flex s-center items-center" id="mainImage">
-
-                <img src="{% static 'images/me.png'%}" alt="">
-            </div>
-
+        <div class="mb-3">
+          <textarea name="content" rows="4" class="form-control" placeholder="Message"></textarea>
         </div>
-    </section>
+        <button type="submit" class="btn btn-light w-100">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
 
+<!-- Footer -->
+<footer class="bg-black text-center py-4">
+  <div class="mb-2">
+    <a href="https://www.linkedin.com/in/fathima-riswana-a-a94902228/" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/fathimaris/" class="text-white mx-2"><i class="fab fa-github"></i></a>
+    <a href="mailto:fathimaris04@gmail.com" class="text-white mx-2"><i class="fas fa-envelope"></i></a>
+  </div>
+  <p class="mb-0">&copy; 2025 Fathima Riswana. All rights reserved.</p>
+</footer>
 
-    <!-- About Section -->
-    <section id="about">
-        <h1 class="t-center my-2 t-white f-2">About Me</h1>
-        <div class="about-container flex s-around ">
-            <div class=" about-left flex s-center items-center">
-                <!-- Here in src replade the given link with your secondary image link -->
-                <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%;">
-            </div>
-
-            <div class="about-right flex">
-                <div class="about-content">
-                    <h1 class="t-white m-b-1 poppins">FATHIMA RISWANA A</h1>
-                    <p class="t-white poppins">
-                         Hello! I am Fathima Riswana, a passionate Python full-stack developer with a keen interest in building innovative and efficient web applications. I have experience working on diverse projects, including event management systems and blood bank platforms, where I honed my skills in front-end and back-end development.
-                        I am driven by a love for solving complex problems and delivering user-friendly solutions. With a background in Computer Science Engineering, I continuously strive to learn new technologies and improve my expertise. Outside of coding, I enjoy exploring new tech trends and collaborating with others to create impactful projects.
-                    </p>
-                    <a class="btn " href="{% static 'pdf/Fathima_Riswana_A_Resume (1).pdf' %}" download="Fathima_Riswana_Resume.pdf" id="hireme">DOWNLOAD CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h1 class="t-center my-2 t-white f-2">Skills</h1>
-        <div class="services-container flex s-around h-50">
-
-
-        <div class="skills-right flex items-center">
-            <div class="skillss-container">
-                <div class="python bar p-relative"><span class="bar-content left t-white"> Python </span><span
-                        class="bar-content right-skills t-white">90%</span></div>
-                <div class="django bar p-relative"><span class="bar-content left t-white"> Django </span><span
-                        class="bar-content right-skills t-white">90%</span></div>
-                <div class="html bar p-relative"><span class="bar-content left t-white">HTML</span><span
-                        class="bar-content right-skills t-white">90%</span></div>
-                <div class="css bar p-relative"><span class="bar-content left t-white">CSS</span><span
-                        class="bar-content right-skills t-white">90%</span></div>
-                 <div class="react bar p-relative"><span class="bar-content left t-white">React Js</span><span
-                        class="bar-content right-skills t-white">80%</span></div>
-                <div class="figma bar p-relative"><span class="bar-content left t-white">Figma</span><span
-                        class="bar-content right-skills t-white">70%</span></div>
-                 <div class="wordpress bar p-relative"><span class="bar-content left t-white">WordPress</span><span
-                        class="bar-content right-skills t-white">60%</span></div>
-                <div class="js bar p-relative"><span class="bar-content left t-white">JavaScript</span><span
-                        class="bar-content right-skills t-white">65%</span></div>
-                <div class="mongodb bar p-relative"><span class="bar-content left t-white">MongoDB</span><span
-                        class="bar-content right-skills t-white">50%</span></div>
-                <div class="mysql bar p-relative"><span class="bar-content left t-white">MySQL</span><span
-                        class="bar-content right-skills t-white">50%</span></div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-
-    <!-- Projects Section -->
-    <section id="Projects">
-        <h1 class=" t-center my-2 t-white f-2">Projects</h1>
-        <div class="projects-container flex s-center">
-            <div class="projects-item flex f-col s-center items-center">
-
-                <h1 class="t-white poppins">Time Tab</h1>
-                <p class="t-white poppins">The Timetable Generation Application is designed to streamline scheduling in educational settings. It allows users to manage courses, subjects, and staff, then automatically generates conflict-free timetables by assigning subjects to specific periods. Built with Django and a structured database, it enables easy adjustments and efficient organization.
-                <div class="buttons flex s-around">
-                    <a href="https://github.com/fathimaris/Timetable_Generator"
-                        target="_blanks" class="btn mx-1 m-top">GitHub</a>
-                </div>
-            </div>
-            <div class="projects-item flex f-col s-center items-center">
-
-                <h1 class="t-white poppins">Resume Extractor</h1>
-                <p class="t-white poppins">The project is a web application designed for HR professionals to manage job seeker resumes. It extracts key details from uploaded resumes using regular expressions (regex) to capture information like name, email, phone number, skills, and experience. The application also features an HR dashboard for viewing and downloading resumes.</p>
-                <div class="buttons flex s-around">
-                    <a href="https://github.com/fathimaris/Resume-Details-Extraction-System"
-                        target="_blanks" class="btn mx-1 m-top">GitHub</a>
-                </div>
-            </div>
-            <div class="projects-item flex f-col s-center items-center">
-
-                <h1 class="t-white poppins">Milina Events</h1>
-                <p class="t-white poppins">An Event Management Application simplifies event planning and coordination. It offers features like event creation, calendar integration, and attendee management. Users can add event details such as date, title, and description, view upcoming events, and auto-remove past events. It ensures efficient event tracking and seamless user interaction.</p>
-                <div class="buttons flex s-around">
-                    <a href="https://github.com/fathimaris/Event_Management" target="_blanks"
-                        class="btn mx-1 m-top">GitHub</a>
-                </div>
-            </div>
-
-         </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Me Section -->
-    <section id="Contact" class="m-b-1">
-        <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
-        <div class="contact-container flex s-around items-centers">
-            <div class="form" id="contactForm">
-                <form method="post" >
-                    {% csrf_token %}
-                    <div class="name form-div">
-                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
-                    </div>
-
-                    <div class="email form-div">
-                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
-                            required>
-                    </div>
-
-                    <div class="phone form-div">
-                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
-                            required>
-                    </div>
-
-                    <div class="textarea form-div">
-                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
-                            placeholder="Enter Messages"></textarea>
-                    </div>
-                    <button type="submit" class="btn poppins" id="submit">Send</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="footer">
-        <ul class="flex s-center w-80 m-auto my-2 res">
-            <li><a href="#home" class="poppinss">Home</a></li>
-            <li><a href="#about" class="poppinss">About</a></li>
-            <li><a href="#skills" class="poppinss">Skills</a></li>
-            <li><a href="#Projects" class="poppinss">Projects</a></li>
-        </ul>
-        <ul class="flex s-center w-80 font-awesome ">
-            <a href="https://www.linkedin.com/in/fathima-riswana-a-a94902228/" target="_blank">
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-            </a>
-            <a href="https://github.com/fathimaris/" target="_blank">
-                <li><i class="fa-brands fa-github"></i></li>
-            </a>
-                <a href="mailto:fathimaris04@gmail.com?subject=Hello I am contacting you by viewing your portfolio&body=I%20would%20like%20to%20connect%20with%20you." target="_blank">
-                    <li><i class="fa-brands fa-telegram"></i></li>
-            </a>
-
-        </ul>
-        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">
-                </span></p>
-
-    </footer>
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
