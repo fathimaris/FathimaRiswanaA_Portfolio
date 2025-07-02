@@ -1,0 +1,13 @@
+# render.yaml
+services:
+  - type: web
+    name: personal-portfolio
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn portfolio.wsgi:application"  # or app:app for Flask
+    envVars:
+      - key: SECRET_KEY
+        value: django-insecure-j491d_&5yz*c5=z)6pjp+1h793=qgkc4j7jto#n-3zsxwqaaz9
+      - key: DEBUG
+        value: False
