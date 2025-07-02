@@ -22,23 +22,23 @@ def contact(request):
             pass
         else:
             messages.error(request, 'Lenght of name should be greater than 2 and less than 30 words ')
-            return render(request, 'home.html')
+            return render(request, 'Home.html')
 
         if len(email) > 1 and len(email) < 30:
             pass
         else:
             messages.error(request, 'invaild email try again ')
-            return render(request, 'home.html')
+            return render(request, 'Home.html')
         print(len(number))
         if len(number) > 9 and len(number) < 13:
             pass
         else:
             messages.error(request, 'invaild number please try again ')
-            return render(request, 'home.html')
+            return render(request, 'Home.html')
         ins = models.Contact(name=name, email=email, content=content, number=number)
         ins.save()
         messages.success(request, 'Thank You for contacting me!! Your message has been saved ')
         print('data has been saved to database')
 
         print('The request is no pass ')
-    return render(request, 'home.html')
+    return render(request, 'portfolio/Home.html')
